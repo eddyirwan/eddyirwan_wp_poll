@@ -5,7 +5,7 @@ How to use?
 
 in pages for default language (your native language)
 
-[abc]
+<code>[abc]</code>
 
 in pages for english language
 
