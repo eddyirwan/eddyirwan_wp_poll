@@ -9,7 +9,7 @@ in pages for default language (your native language)
 
 in pages for english language
 
-[abc lang="en"][/abc]
+<code>[abc lang="en"][/abc]</code>
 
 future release<br/>
 1.Support more than one language.<br/>
