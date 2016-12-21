@@ -16,8 +16,8 @@ require_once( plugin_dir_path( __FILE__ ) . "frontend.php");
 require_once( plugin_dir_path( __FILE__ ) . "backend.php");
 
 
-#register_activation_hook(__FILE__, 'createDB');
-#register_deactivation_hook( __FILE__, 'deleteDB' );
+register_activation_hook(__FILE__, 'createDB');
+register_deactivation_hook( __FILE__, 'deleteDB' );
 add_action( 'wp_ajax_ei_voteThruAjax', 'ei_voteThruAjax' );
 add_action( 'wp_ajax_nopriv_ei_voteThruAjax', 'ei_voteThruAjax' );
 add_action( 'wp_ajax_ei_seeResultFromAjax', 'ei_seeResultFromAjax' );
@@ -42,5 +42,7 @@ function listUpdatePoll() {
 function listAddPollAttribute() {
 	$instance1 = new listAddPollAttribute();
 }
+
+
 
 ?>
