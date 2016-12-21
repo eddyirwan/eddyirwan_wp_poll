@@ -34,21 +34,19 @@ function createDB() {
 	) $charset_collate;";
 
 	$sql3 = "
-		INSERT INTO `$table_name1` (`id`, `created_time`, `status`, `title_default`, `title_en`, `create_by`) VALUES
+		INSERT INTO $table_name1 (id, created_time, status, title_default, title_en, create_by) VALUES
 		(1, '2016-12-11 17:09:59', 1, 'Apa pendapat anda mengenai Portal Rasmi JABATAN PENDAFTARAN NEGARA yang baru?', 
-		'What is your opinion about JPN''s new Official Portal?*', 1); ";
+		'What is your opinion about JPNs new Official Portal?*', 1); ";
 
 	$sql4 = "
-		INSERT INTO `$table_name2` (`id`, `table_master`, `title_default`, `title_en`, `create_by`, `vote`, `checked`) VALUES
+		INSERT INTO $table_name2 (id, table_master, title_default, title_en, create_by, vote, checked) VALUES
 		(1, 1, 'Sangat Menarik', 'Very Interesting', 1, 4, 1),
 		(2, 1, 'Menarik', 'Interesting', 1, 2, 0),
 		(3, 1, 'Sederhana', 'Moderate', 1, 4, 0),
 		(4, 1, 'Tidak Menarik', 'Not Interesting At All', 1, 1, 0);";
 
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-    dbDelta($sql1.$sql2);
-    dbDelta($sql3);
-    dbDelta($sql4);
+    dbDelta($sql1.$sql2.$sql3.$sql4);
 }
 
 function deleteDB() {
