@@ -26,14 +26,14 @@ if ( is_wp_error( $reg_errors ) ) {
 <p>
 Title Default (required) <br/>
 <input type="text" name="title-default" 
-    pattern="[a-zA-Z0-9 ]+" 
+    
     value="<?php echo ( isset( $_POST["title-default"] ) ?  esc_attr( $_POST["title-default"] ) : '' ); ?>" 
     size="100" />
 </p>
 <p>
 Title En (required) <br/>
 <input type="text" name="title-en" 
-    pattern="[a-zA-Z0-9 ]+" 
+    
     value="<?php echo ( isset( $_POST["title-en"] ) ?  esc_attr( $_POST["title-en"] ) : '' ) ?>" 
     size="100" />
 </p>
@@ -57,14 +57,14 @@ for ($x=0;$x<$maxAttr;$x++) {
 
 <td>
 Default: </td><td><input type="text" name="<?php echo $default; ?>" 
-    pattern="[a-zA-Z0-9 ]+" 
+    
     value="<?php echo ( isset( $_POST[$default] ) ?  esc_attr( $_POST[$default] ) : '' ); ?>" 
     size="40" />
     </td>
     </tr>
 <tr><td>
 En: </td><td><input type="text" name="<?php echo $en; ?>" 
-    pattern="[a-zA-Z0-9 ]+" 
+    
     value="<?php echo ( isset( $_POST[$en] ) ?  esc_attr( $_POST[$en] ) : '' ); ?>" 
     size="40" />
     </td></tr>

@@ -28,7 +28,6 @@ if ( is_wp_error( $reg_errors ) ) {
 <p>
 Title Default (required) <br/>
 <input type="text" name="title-default" 
-    pattern="[a-zA-Z0-9?@# ]+" 
     title="Normal character with ?@# only"
     value="<?php echo ( isset( $_POST["title-default"] ) ?  ( $_POST["title-default"] ) : $row->title_default ); ?>" 
     size="100" />
@@ -36,7 +35,6 @@ Title Default (required) <br/>
 <p>
 Title En (required) <br/>
 <input type="text" name="title-en" 
-    pattern="[a-zA-Z0-9?@# ]+" 
     title="Normal character with ?@# only"
     value="<?php echo ( isset( $_POST["title-en"] ) ? ( $_POST["title-en"] ) : $row->title_en ) ?>" 
     size="100" />
@@ -83,14 +81,12 @@ for ($x=0;$x<$maxAttr;$x++) {
 
 <td>
 Default: </td><td><input type="text" name="<?php echo $default; ?>" 
-    pattern="[a-zA-Z0-9 ]+" 
     value="<?php echo ( isset( $_POST[$default] ) ?  esc_attr( $_POST[$default] ) : $rows1[$x]->title_default ); ?>" 
     size="40" />
     </td>
     </tr>
 <tr><td>
 En: </td><td><input type="text" name="<?php echo $en; ?>" 
-    pattern="[a-zA-Z0-9 ]+" 
     value="<?php echo ( isset( $_POST[$en] ) ?  esc_attr( $_POST[$en] ) : $rows1[$x]->title_en ); ?>" 
     size="40" />
     </td></tr>

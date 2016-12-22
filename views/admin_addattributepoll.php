@@ -38,14 +38,12 @@ for ($x=0;$x<$maxAttr;$x++) {
 
 <td>
 Default: </td><td><input type="text" name="<?php echo $default; ?>" 
-    pattern="[a-zA-Z0-9 ]+" 
     value="<?php echo ( isset( $_POST[$default] ) ?  esc_attr( $_POST[$default] ) : '' ); ?>" 
     size="40" />
     </td>
     </tr>
 <tr><td>
 En: </td><td><input type="text" name="<?php echo $en; ?>" 
-    pattern="[a-zA-Z0-9 ]+" 
     value="<?php echo ( isset( $_POST[$en] ) ?  esc_attr( $_POST[$en] ) : '' ); ?>" 
     size="40" />
     </td></tr>
